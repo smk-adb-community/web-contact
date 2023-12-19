@@ -1,0 +1,105 @@
+/* Default styles for all devices */
+body {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.mobile {
+    display: none;
+}
+
+/* Media query for devices with a maximum width of 767px (typical for mobile devices) */
+@media only screen and (max-width: 767px) {
+
+    /* Styles for mobile devices */
+    body {
+        background-color: #000;
+        color: #e3e3e3;
+    }
+
+    .mobile {
+        display: block;
+
+        h1 {
+            text-align: center;
+        }
+
+        #searchContact {
+            width: 100%;
+            border: none;
+            padding: 1rem .7rem;
+        }
+
+        .contact-lists {
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+            margin: 1em 0;
+
+            .contact-item {
+                display: flex;
+                gap: .8em;
+
+                .contact-avatar {
+                    width: 5em;
+                    height: 5em;
+
+                    img {
+                        width: 100%;
+                        border-radius: 50%;
+                    }
+                }
+
+                .contact-preview {
+                    padding-top: 1em;
+
+                    strong {
+                        font-size: 1.3em;
+                        line-height: 0%;
+                    }
+
+                    p {
+                        font-family: 'Courier New', Courier, monospace;
+                        font-size: 1.7em;
+                        line-height: 0%;
+                    }
+                }
+
+                &:hover {
+                    cursor: pointer;
+                    background-color: #f0f0f0;
+                    color: #000;
+                    border-radius: 5px;
+                }
+            }
+        }
+
+        .addNewContact {
+            padding: 2em 2.4em;
+            border: none;
+            border-radius: 50%;
+            font-weight: bolder;
+            position: absolute;
+            bottom: 2em;
+            right: 2em;
+            cursor: pointer;
+        }
+    }
+
+    .web {
+        display: none;
+    }
+}
+
+/* Media query for devices in portrait orientation */
+@media only screen and (max-width: 767px) and (orientation: portrait) {
+
+    /* Styles for mobile devices in portrait mode */
+    .mobile {
+        display: block;
+    }
+
+    .web {
+        display: none;
+    }
+}
