@@ -1,0 +1,9 @@
+Database name: web_contact
+
+Contacts
+- id (primary)
+- fullName (not null)
+- email (default: null)
+- phoneNumber (not null)
+- address (default: null)
+- organization (default: null)

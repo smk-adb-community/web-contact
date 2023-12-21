@@ -24,6 +24,20 @@ body {
             text-align: center;
         }
 
+        .btn-block {
+            display: block;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            margin: 5px 0px;
+            &:hover {
+                background-color: aqua;
+                color: #222;
+                font-weight: bold;
+                cursor: pointer;
+            }
+        }
+
         #searchContact {
             width: 100%;
             border: none;
@@ -67,14 +81,13 @@ body {
 
                 &:hover {
                     cursor: pointer;
-                    background-color: #f0f0f0;
-                    color: #000;
+                    color: #ababab;
                     border-radius: 5px;
                 }
             }
         }
 
-        .addNewContact {
+        .addNewContact, .backButton {
             padding: 2em 2.4em;
             border: none;
             border-radius: 50%;
@@ -83,6 +96,34 @@ body {
             bottom: 2em;
             right: 2em;
             cursor: pointer;
+            background-color: #f0f0f0;
+            text-decoration: none;
+
+            &:hover {
+                background-color: aqua;
+                color: white;
+            }
+        }
+
+        .newContactForm {
+            display: flex;
+            flex-direction: column;
+            
+            label {
+                display: inherit;
+                flex-direction: inherit;
+                row-gap: 5px;
+                margin-bottom: 5px;
+
+                span {
+                    font-weight: bold;
+                    font-style: italic;
+                }
+
+                .form-input {
+                    padding: 5px 10px;
+                }
+            }
         }
     }
 
