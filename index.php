@@ -1,8 +1,5 @@
 <?php
-require_once './config/db.php';
-
-// Fetch contact data
-$results = $db->query("SELECT * FROM contacts ORDER BY contactId DESC");
+require_once "./config/db.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -22,21 +19,15 @@ $results = $db->query("SELECT * FROM contacts ORDER BY contactId DESC");
         <h1>Web Contact Management</h1>
         <input type="search" name="searchContact" id="searchContact" placeholder="Search for contact..." />
         <div class="contact-lists">
-            <?php
-            while ($row = $results->fetchArray()) {
-            ?>
             <div class="contact-item">
                 <div class="contact-avatar">
                     <img src="https://placehold.co/400" alt="username" />
                 </div>
                 <div class="contact-preview">
-                    <strong><?= $row['fullName'] ?></strong>
-                    <p><?= $row['phoneNumber'] ?></p>
+                    <strong>John Doe</strong>
+                    <p>084154681245</p>
                 </div>
             </div>
-            <?php
-            }
-            ?>
         </div>
         <a class="addNewContact" href="new-contact.php">+</a>
     </div>

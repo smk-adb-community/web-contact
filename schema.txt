@@ -3,7 +3,19 @@ Database name: web_contact
 Contacts
 - id (primary)
 - fullName (not null)
-- email (default: null)
 - phoneNumber (not null)
+- email (default: null)
 - address (default: null)
 - organization (default: null)
+
+SQL:
+
+CREATE TABLE "contacts" (
+	"id"	INTEGER NOT NULL,
+   "fullName" TEXT NOT NULL,
+   "phoneNumber" TEXT NOT NULL,
+   "email" TEXT,
+   "address" TEXT,
+   "organization" TEXT,
+	PRIMARY KEY("id" AUTOINCREMENT)
+);

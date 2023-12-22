@@ -1,30 +1,5 @@
 <?php
-
 require_once "./config/db.php";
-
-if (!empty($_POST)) {
-
-    $formData = $_POST;
-
-    // This is required fields
-    $fullName       = $formData['fullName'];
-    $phoneNumber    = $formData['phoneNumber'];
-
-    // This is optional fields
-    $email          = $formData['email'] ?? null;
-    $address        = $formData['address'] ?? null;
-    $organization   = $formData['organization'] ?? null;
-
-    // Insert new contact into database
-    $result = $db->exec("INSERT INTO contacts (fullName, phoneNumber, email, address, organization) VALUES ('".$fullName."', '".$phoneNumber."', '".$email."', '".$address."', '".$organization."')");
-
-    if (!$result) {
-        echo $db->lastErrorMsg();
-    } else {
-        header("Location: index.php");
-    }
-}
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -45,16 +20,16 @@ if (!empty($_POST)) {
         <h1>Create New Contact</h1>
         <form action="" method="post" class="newContactForm" autocomplete="off">
             <label for="fullName">
-                <span>Fullname</span>
+                <span>Fullname <sup>*</sup></span>
                 <input name="fullName" type="text" class="form-input input-text">
+            </label>
+            <label for="phoneNumber">
+                <span>Phone Number <sup>*</sup></span>
+                <input name="phoneNumber" type="tel" class="form-input input-text">
             </label>
             <label for="email">
                 <span>Email</span>
                 <input name="email" type="email" class="form-input input-text">
-            </label>
-            <label for="phoneNumber">
-                <span>Phone Number</span>
-                <input name="phoneNumber" type="tel" class="form-input input-text">
             </label>
             <label for="address">
                 <span>Address</span>
