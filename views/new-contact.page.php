@@ -1,5 +1,5 @@
 <h1>Create New Contact</h1>
-<form action="" method="post" class="newContactForm" autocomplete="off">
+<form action="../actions/save.action.php" method="post" class="newContactForm" autocomplete="off">
     <label for="fullName">
         <span>Fullname <sup>*</sup></span>
         <input name="fullName" type="text" class="form-input input-text">

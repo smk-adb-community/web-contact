@@ -3,7 +3,7 @@ class DBConnection extends SQLite3
 {
    public function __construct()
    {
-      $this->open('./config/web_contact.db');
+      $this->open(__DIR__ . '/../web_contact.db');
    }
 }
 
