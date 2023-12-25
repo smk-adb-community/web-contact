@@ -1,4 +1,5 @@
 <?php
+require_once "helpers.php";
 class DBConnection extends SQLite3
 {
    public function __construct()

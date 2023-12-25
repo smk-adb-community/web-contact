@@ -3,7 +3,7 @@
 Aplikasi manajemen kontak berbasis Website dengan tampilan sederhana memiliki fitur:
 
 [x] Menyimpan kontak
-[ ] Menampilkan kontak
+[x] Menampilkan kontak
 [ ] Menampilkan detail kontak
 [ ] Mengedit kontak
 [ ] Menghapus kontak
@@ -19,3 +19,6 @@ Aplikasi ini dibuat menggunakan:
 **Back End**
 - PHP
 - SQLite / MySQL
+
+081234567891
++62-812-3456-7891

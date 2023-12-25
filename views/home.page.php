@@ -16,7 +16,7 @@ while ($row = $results->fetchArray(SQLITE3_ASSOC)) {
             </div>
             <div class="contact-preview">
                 <strong><?= $contact['fullName'] ?></strong>
-                <p><?= $contact['phoneNumber'] ?></p>
+                <p><?= format_phone_number($contact['phoneNumber']); ?></p>
             </div>
         </div>
     <?php endforeach; ?>
