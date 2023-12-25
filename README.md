@@ -2,10 +2,11 @@
 
 Aplikasi manajemen kontak berbasis Website dengan tampilan sederhana memiliki fitur:
 
-[ ] Menyimpan kontak
+[x] Menyimpan kontak
+[ ] Menampilkan kontak
+[ ] Menampilkan detail kontak
 [ ] Mengedit kontak
 [ ] Menghapus kontak
-[ ] Menampilkan kontak
 [ ] Pencarian kontak
 
 Aplikasi ini dibuat menggunakan:
