@@ -22,6 +22,4 @@
     </label>
     <button type="submit" class="btn-block">Save Contact</button>
 </form>
-<a class="backButton" href="index.php">
-    <
-</a>
+<a class="backButton" href="index.php">⬅️</a>

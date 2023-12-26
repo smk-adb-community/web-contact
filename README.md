@@ -4,6 +4,7 @@ Aplikasi manajemen kontak berbasis Website dengan tampilan sederhana memiliki fi
 
 [x] Menyimpan kontak
 [x] Menampilkan kontak
+[x] Membuat format nomor telepon
 [ ] Menampilkan detail kontak
 [ ] Mengedit kontak
 [ ] Menghapus kontak

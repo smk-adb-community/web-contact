@@ -10,15 +10,17 @@ while ($row = $results->fetchArray(SQLITE3_ASSOC)) {
 <input type="search" name="searchContact" id="searchContact" placeholder="Search for contact..." />
 <div class="contact-lists">
     <?php foreach ($contacts as $contact) : ?>
-        <div class="contact-item">
-            <div class="contact-avatar">
-                <img src="https://placehold.co/400" alt="username" />
+        <a href="detail.php?contact_id=<?= $contact['id'] ?>">
+            <div class="contact-item">
+                <div class="contact-avatar">
+                    <img src="https://placehold.co/400" alt="username" />
+                </div>
+                <div class="contact-preview">
+                    <strong><?= $contact['fullName'] ?></strong>
+                    <p><?= format_phone_number($contact['phoneNumber']); ?></p>
+                </div>
             </div>
-            <div class="contact-preview">
-                <strong><?= $contact['fullName'] ?></strong>
-                <p><?= format_phone_number($contact['phoneNumber']); ?></p>
-            </div>
-        </div>
+        </a>
     <?php endforeach; ?>
 </div>
-<a class="addNewContact" href="new-contact.php">+</a>
+<a class="addNewContact" href="new-contact.php">➕</a>
