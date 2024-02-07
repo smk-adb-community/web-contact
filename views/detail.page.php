@@ -13,6 +13,6 @@ $contact = $db->querySingle("SELECT * FROM contacts WHERE id = '". $contactId ."
 <hr>
 <div class="flex-center">
     <a href="edit-contact.php?contact_id=<?= $contactId ?>" class="btn btn-edit">Edit</a>
-    <a href="" class="btn btn-delete">Delete</a>
+    <a href="actions/delete.php?contact_id=<?= $contactId ?>" class="btn btn-delete">Delete</a>
 </div>
 <a class="backButton" href="index.php">⬅️</a>

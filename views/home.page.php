@@ -1,13 +1,22 @@
 <?php
 // Mengambil data kontak dari database
-$results = $db->query("SELECT * FROM contacts");
 $contacts = [];
+
+if (!empty($_GET['searchContact'])) {
+    $results = $db->query("SELECT * FROM contacts WHERE fullName LIKE '%".$_GET['searchContact']."%' OR email LIKE '%".$_GET['searchContact']."%'");
+} else {
+    $results = $db->query("SELECT * FROM contacts");
+}
+
 while ($row = $results->fetchArray(SQLITE3_ASSOC)) {
     $contacts[] = $row;
 }
+
 ?>
 <h1>Web Contact Management</h1>
-<input type="search" name="searchContact" id="searchContact" placeholder="Search for contact..." />
+<form action="" method="get">
+    <input type="search" name="searchContact" id="searchContact" placeholder="Search for contact..." />
+</form>
 <div class="contact-lists">
     <?php foreach ($contacts as $contact) : ?>
         <a href="detail.php?contact_id=<?= $contact['id'] ?>">
